@@ -24,6 +24,11 @@ public class MainClass {
          * Print all the values from the LinkedList
          */
         ll.printList();
-
+        /**
+         * Prepend the new node in the List
+         */
+        ll.prependNode(11);
+        ll.printList();
+        System.out.println("length of the Linked list->"+ll.length);
     }
 }
