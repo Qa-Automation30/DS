@@ -22,4 +22,33 @@ public class LinkedList {
         tail = newNode;
         length++;
     }
+
+    /**
+     * This method is appending a node in linked list
+     * So, if we want to append a new node in list, need to pass a value first
+     * and need to create an object of a Node class to create a new node
+     */
+    void appendNode(int value)
+    {
+        Node newNode = new Node(value);
+        if(length==0)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            tail.next=newNode;
+            tail=newNode;
+        }
+        length++;
+    }
+    void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.println("Printing list values->"+temp.value);
+            temp = temp.next;
+        }
+    }
 }
