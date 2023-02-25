@@ -76,4 +76,86 @@ public class LinkedList {
         }
         length++;
     }
+
+    /**
+     * This method is removing an element from the last of LL
+     * @return
+     */
+    Node removeLast()
+    {
+        if(length==0){
+            return null;
+        }
+      Node temp1;
+      Node temp2;
+      temp1=head;
+      temp2=head;
+      for(int i=0;i<length-1;i++)
+      {
+          temp1=temp1.next;
+          if(temp1.next!=null)
+          {
+              temp2=temp1;
+          }
+      }
+      tail=temp2;
+      tail.next=null;
+      length--;
+      if(length==0)
+      {
+          head=null;
+          tail=null;
+      }
+      return temp1;
+    }
+
+    /**
+     * This method is removing an element from the beginning of LL
+     * @return
+     */
+    Node removeFromFirst()
+    {
+        if(length==0){return null;
+        }
+        Node temp;
+        temp=head;
+        head=head.next;
+        temp.next=null;
+        length--;
+        if(length==0)
+        {
+            tail=null;
+        }
+        return temp;
+    }
+   Node getValueViaIndex(int index)
+    {
+        Node temp=head;
+        if(index<0 ||index>length)
+        {
+            return null;
+        }
+        for(int i=0;i<index;i++)
+        {
+            temp=temp.next;
+        }
+        return temp;
+    }
+    int setTheValueViaIndex(int index,int value)
+    {   Node temp=head;
+        if(index<0||index>length)
+        {
+            return -1;
+        }
+        for (int i=0;i<index;i++)
+        {
+            temp=temp.next;
+        }
+        temp.value=value;
+        return temp.value;
+    }
+    boolean insertNodeAtPosition(int index)
+    {
+        return false;
+    }
 }
