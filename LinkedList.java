@@ -156,6 +156,14 @@ public class LinkedList {
     }
     boolean insertNodeAtPosition(int index)
     {
+        Node newNode = new Node(100);
+        Node temp = head;
+        for(int i=0;i<index-1;i++)
+        {
+            temp=temp.next;
+        }
+        newNode.next=temp.next;
+        temp.next =newNode;
         return false;
     }
 }
