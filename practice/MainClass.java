@@ -23,6 +23,17 @@ public class MainClass {
         System.out.println("================");
         System.out.println("Value at index-->"+ll.setValueAtIndex(2,100));
         ll.printLinkedListValues();
-
+        System.out.println("================");
+        System.out.println( ll.insertNewNodeAtPosition(2,220));
+        ll.printLinkedListValues();
+        System.out.println("================");
+        System.out.println( ll.insertNewNodeAtPosition(0,000));
+        ll.printLinkedListValues();
+        System.out.println("================");
+        System.out.println( ll.insertNewNodeAtPosition(6,600));
+        ll.printLinkedListValues();
+        System.out.println("================");
+        System.out.println( ll.removeNodeFromIndex(5).value);
+        ll.printLinkedListValues();
     }
 }

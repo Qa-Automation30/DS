@@ -121,4 +121,56 @@ public class LinkedList {
         temp.value=value;
         return temp.value;
     }
+    //insert a new node at index position
+    int insertNewNodeAtPosition(int index, int value)
+    {
+        Node newNode = new Node(value);
+        Node temp=head;
+        if(index<0 || index>length)
+        {
+            return 0;
+        }
+        //prepend condition check
+        if(index==0)
+        {
+            newNode.next=head;
+            head=newNode;
+            length++;
+            return newNode.value;
+        }
+        //append condition check
+        if(index==length)
+        {
+            tail.next=newNode;
+            tail=newNode;
+            length++;
+            return newNode.value;
+        }
+        for(int i=0;i<index-1;i++)
+        {
+            temp=temp.next;
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+        length++;
+        return newNode.value;
+    }
+    //Remove node from an index
+    Node removeNodeFromIndex(int index)
+    {
+        Node prev=head;
+        Node temp=head;
+        if(index<0 || index>length)
+        {
+            return null;
+        }
+        for(int i=0;i<index-1;i++)
+        {
+            prev=prev.next;
+        }
+        prev.next=temp.next;
+        temp.next=null;
+        length--;
+        return temp;
+    }
 }
