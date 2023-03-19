@@ -59,6 +59,7 @@ public class MainClass {
         System.out.println("+++++++++++++++++");
         ll.setTheValueViaIndex(2,99);
         ll.printList();
+        ll.printList();
 
 
     }
