@@ -100,10 +100,25 @@ public class LinkedList {
         {
             return 0;
         }
-        for(int i=0;i<=index-1;i++)
+        for(int i=0;i<index;i++)
         {
             temp=temp.next;
         }
+        return temp.value;
+    }
+    //set the value in LinkedList at index
+    int setValueAtIndex(int index, int value)
+    {
+        Node temp=head;
+        if(index<0 || index>length)
+        {
+            return 0;
+        }
+        for(int i=0;i<index;i++)
+        {
+            temp=temp.next;
+        }
+        temp.value=value;
         return temp.value;
     }
 }

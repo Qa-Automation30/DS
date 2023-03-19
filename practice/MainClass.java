@@ -19,7 +19,10 @@ public class MainClass {
         ll.removeFirstElementFromList();
         ll.printLinkedListValues();
         System.out.println("================");
-        System.out.println(ll.getValue(2));
+        System.out.println("Value at index-->"+ll.getValue(2));
+        System.out.println("================");
+        System.out.println("Value at index-->"+ll.setValueAtIndex(2,100));
+        ll.printLinkedListValues();
 
     }
 }
